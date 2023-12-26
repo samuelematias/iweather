@@ -23,6 +23,6 @@ describe('Component: SelectList', () => {
         const selectedCity = screen.getByText(/maria/i);
         fireEvent.press(selectedCity);
 
-        expect(onPress).toHaveBeenCalled();
+        expect(onPress).toHaveBeenCalledWith(data[1])
     });
 });
