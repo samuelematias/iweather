@@ -1,6 +1,9 @@
 {
   "preset": "jest-expo",
-  "setupFiles": ["./__tests__/mocks/libs/async-storage.js"],
+  "setupFiles": [
+    "./__tests__/mocks/libs/async-storage.js",
+    "./__tests__/mocks/libs/react-native-safe-area-context.js"
+  ],
   "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"],
   "transform": {
     "^.+\\.jsx?$": "babel-jest",
