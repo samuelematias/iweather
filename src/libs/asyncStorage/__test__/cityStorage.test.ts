@@ -1,5 +1,5 @@
-import { getStorageCity, saveStorageCity } from "@libs/asyncStorage/cityStorage"
-import { CityProps } from "@services/getCityByNameService";
+import { getStorageCity, removeStorageCity, saveStorageCity } from "@libs/asyncStorage/cityStorage"
+import { mockCityStorage } from "@__tests__/mocks/storage/mockCityStorage";
 
 describe('Storage: CityStorage', () => {
     test("should be return null when don't have a city storaged", async () => {
@@ -9,17 +9,20 @@ describe('Storage: CityStorage', () => {
     });
 
     test('shoul be return city storaged', async () => {
-        const newCity: CityProps = {
-            id: '1',
-            name: 'Recife',
-            latitude: 123,
-            longitude: 456
-        }
 
-        await saveStorageCity(newCity)
+        await saveStorageCity(mockCityStorage)
 
         const response = await getStorageCity()
 
-        expect(response).toEqual(newCity)
+        expect(response).toEqual(mockCityStorage)
     });
+
+    test('should be remove city storage', async () => {
+        await saveStorageCity(mockCityStorage)
+        await removeStorageCity()
+
+        const response = await getStorageCity()
+
+        expect(response).toBeNull()
+    })
 })
