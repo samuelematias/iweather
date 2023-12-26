@@ -18,6 +18,6 @@ describe('Component: SelectList', () => {
             />
         );
 
-        expect(getByText('Recife')).toBeTruthy();
+        expect(getByText(/maria/i)).toBeTruthy();
     });
 });
