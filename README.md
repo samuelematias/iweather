@@ -1,4 +1,4 @@
-<img src="docs/assets/logo.png" alt="app logo" title="&quot;Pascal&quot;" width="100" align="right" />
+<img src="docs/assets/logo.png" alt="app logo" title="&quot;Pascal&quot;" width="250" align="right" />
 
 # iWeather
 
