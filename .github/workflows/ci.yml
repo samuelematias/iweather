@@ -1,4 +1,4 @@
-name: React Native (CI) - Analyze the code and Run tests.
+name: React Native (CI) - Run tests.
 
 on:
   pull_request:
